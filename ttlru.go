@@ -144,7 +144,7 @@ func (c *Cache) Get(key interface{}) (interface{}, bool) {
 		// the item should be automatically removed when it expires, but we
 		// check just to be safe
 		if time.Now().Before(ent.expires) {
-			c.resetEntryTTL(ent)
+			//c.resetEntryTTL(ent)
 			return ent.value, true
 		}
 	}
